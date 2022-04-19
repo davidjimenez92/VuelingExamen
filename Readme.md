@@ -14,12 +14,12 @@ exceptions in every layer. Implement unit test for any layer, too. Take care of 
 You can use any Dependency Injection, Unit Testing, Mocking frameworks or any other that you consider necessary. 
 ## Implementation
 1. [VuelingWebServices](https://github.com/davidjimenez92/VuelingExamen/tree/master/VuelingExamen.Distributed.WebServices) is a wcf service from which the solution is executed. In this layer we load the autofac modules defined in lower layers and perform the dependency injection.
-2. [Services]() a library in which an autofac module is created to inject the lower layer so that the upper layer has access to it. In the contracts folder we include interface segregation by splitting the interface [IVuelingService](https://github.com/davidjimenez92/VuelingExamen/blob/master/VuelingExamen.Application.Services/Contracts/IVuelingService.cs) into other interfaces([IAdd](https://github.com/davidjimenez92/VuelingExamen/blob/master/VuelingExamen.Application.Services/Contracts/IAdd.cs))<br>
+2. [Services](https://github.com/davidjimenez92/VuelingExamen/tree/master/VuelingExamen.Application.Services) a library in which an autofac module is created to inject the lower layer so that the upper layer has access to it. In the contracts folder we include interface segregation by splitting the interface [IVuelingService](https://github.com/davidjimenez92/VuelingExamen/blob/master/VuelingExamen.Application.Services/Contracts/IVuelingService.cs) into other interfaces([IAdd](https://github.com/davidjimenez92/VuelingExamen/blob/master/VuelingExamen.Application.Services/Contracts/IAdd.cs))<br>
 The function of this layer is to perform all operations related to business rules and send them to the lower layer.
 3. [Entities](https://github.com/davidjimenez92/VuelingExamen/tree/master/VuelingExamen.Domain.Entities)  This layer contains the entities of our application.
 4. [Repositories](https://github.com/davidjimenez92/VuelingExamen/tree/master/VuelingExamen.Infrastructure.repositories) operations related to data persistence shall be performed in this layer. In this case, in order to implement new file types, we create the repository from the factory pattern to which a file type is passed, for the moment only the txt file will be available.
 5. [CrossCutting](https://github.com/davidjimenez92/VuelingExamen/tree/master/VuelingExamen.CrossCutting.ProjectConfiguration) this layer is created to strongly type the configuration variables of the app.config to encapsulate all configuration properties.
-6. [Client](https://github.com/davidjimenez92/VuelingExamen/tree/master/VuelingExamen.Client.HttpClient)this project is created to be able to upload that web service to azure devops using artifacts.
+6. [Client](https://github.com/davidjimenez92/VuelingExamen/tree/master/VuelingExamen.Client.HttpClient) this project is created to be able to upload that web service to azure devops using artifacts.
  
 ## Architecture Diagram
 ![UML DIAGRAM](https://github.com/davidjimenez92/VuelingExamen/blob/master/umlexam.png)
@@ -47,6 +47,6 @@ Before starting to develop, a [YAML](https://github.com/davidjimenez92/VuelingEx
 
 When the project is ready, the client is uploaded to artifacts.
 
-![arfifacts-web](https://github.com/davidjimenez92/VuelingExamen/blob/master/artifacts.png)
+![arfifacts-web](https://github.com/davidjimenez92/VuelingExamen/blob/master/artifact.png)
 ## Author
 [David Jiménez Miguel](https://github.com/davidjimenez92)
