@@ -1,34 +1,37 @@
-﻿using System;
+﻿using log4net;
+using Microsoft.Practices.EnterpriseLibrary.Validation.Validators;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.ServiceModel.Web;
-using System.Text;
+using VuelingExamen.Application.Dtos;
+using VuelingExamen.Application.Services.Contracts;
+using VuelingExamen.CrossCutting.ProjectConfiguration;
 using VuelingExamen.Distributed.WebServices.Contracts;
 
 namespace VuelingExamen.Distributed.WebServices
 {
-    // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de clase "Service1" en el código, en svc y en el archivo de configuración.
-    // NOTE: para iniciar el Cliente de prueba WCF para probar este servicio, seleccione Service1.svc o Service1.svc.cs en el Explorador de soluciones e inicie la depuración.
     public class VuelingWebService : IVuelingWebService
     {
-        public string GetData(int value)
+        private readonly ILog _logger;
+        private readonly IVuelingService<RegistryDto> _vuelingService;
+
+        public VuelingWebService(ILog logger, IVuelingService<RegistryDto> vuelingService)
         {
-            return string.Format("You entered: {0}", value);
+            _logger = logger;
+            _vuelingService = vuelingService;
         }
 
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
+        public bool Add([NotNullValidator(MessageTemplate = "List is null")] IEnumerable<string> data, FileType type = FileType.Text)
         {
-            if (composite == null)
+            _logger.Debug(data.Count());
+            var listData = data.ToList();
+            var dto = new RegistryDto()
             {
-                throw new ArgumentNullException("composite");
-            }
-            if (composite.BoolValue)
-            {
-                composite.StringValue += "Suffix";
-            }
-            return composite;
+                Rebeld = listData[0],
+                Planet = listData[1]
+            };
+
+            _logger.Debug(dto);
+            return _vuelingService.Add(dto, type);
         }
     }
 }

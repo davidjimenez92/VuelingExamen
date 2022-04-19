@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="21969907-19f7-41db-bbbd-ca9efe6b7722" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ArrayList" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:63211/VuelingWebService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="VuelingWebService.xsd" MetadataType="Schema" ID="b2bda379-b3c4-4b2e-a293-151d138dc72a" SourceId="1" SourceUrl="http://localhost:63211/VuelingWebService.svc?xsd=xsd1" />
+    <MetadataFile FileName="VuelingWebService1.xsd" MetadataType="Schema" ID="fccbd660-140d-4c57-b04c-198e4b9afd54" SourceId="1" SourceUrl="http://localhost:63211/VuelingWebService.svc?xsd=xsd0" />
+    <MetadataFile FileName="VuelingWebService2.xsd" MetadataType="Schema" ID="132c285c-bac6-4d1c-95a6-07777d0c6685" SourceId="1" SourceUrl="http://localhost:63211/VuelingWebService.svc?xsd=xsd3" />
+    <MetadataFile FileName="VuelingWebService3.xsd" MetadataType="Schema" ID="b7017720-8eb4-4e42-8bdd-cbf54bba6599" SourceId="1" SourceUrl="http://localhost:63211/VuelingWebService.svc?xsd=xsd2" />
+    <MetadataFile FileName="VuelingWebService.disco" MetadataType="Disco" ID="b2125088-a8c7-4ab5-81c3-6a07e532e6e6" SourceId="1" SourceUrl="http://localhost:63211/VuelingWebService.svc?disco" />
+    <MetadataFile FileName="VuelingWebService4.xsd" MetadataType="Schema" ID="8671bc7c-c3ee-4f00-8521-a58fcc9303f4" SourceId="1" SourceUrl="http://localhost:63211/VuelingWebService.svc?xsd=xsd4" />
+    <MetadataFile FileName="VuelingWebService.wsdl" MetadataType="Wsdl" ID="95cec39f-764f-4f06-830b-90c91b36717d" SourceId="1" SourceUrl="http://localhost:63211/VuelingWebService.svc?wsdl" />
+    <MetadataFile FileName="VuelingWebService5.xsd" MetadataType="Schema" ID="19655168-0d6c-4cb5-8bab-489bc4b5a780" SourceId="1" SourceUrl="http://localhost:63211/VuelingWebService.svc?xsd=xsd5" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
