@@ -63,6 +63,10 @@
       <Project>{D8C6D2EE-CBF1-40FE-A93E-B34EC363FB86}</Project>
       <Name>VuelingExamen.Application.Services</Name>
     </ProjectReference>
+    <ProjectReference Include="..\VuelingExamen.CrossCutting.ProjectConfiguration\VuelingExamen.CrossCutting.ProjectConfiguration.csproj">
+      <Project>{FC4483F3-C2F0-4ED7-B5EA-B5F441E2B5E7}</Project>
+      <Name>VuelingExamen.CrossCutting.ProjectConfiguration</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Autofac.Extras.Moq">

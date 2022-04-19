@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using VuelingExamen.Application.Dtos;
 using Autofac.Extras.Moq;
 using VuelingExamen.Application.Services.Contracts;
+using VuelingExamen.CrossCutting.ProjectConfiguration;
 
 namespace VuelingExamen.Application.ServicesUnitTests.Implementations
 {
@@ -31,14 +32,14 @@ namespace VuelingExamen.Application.ServicesUnitTests.Implementations
             using(var mock = AutoMock.GetLoose())
             {
                 mock.Mock<IVuelingService<RegistryDto>>()
-                    .Setup(service => service.Add(_registryDto))
+                    .Setup(service => service.Add(_registryDto, FileType.Text))
                     .Returns(true);
 
                 var mockedService = mock.Create<IVuelingService<RegistryDto>>();
-                var spectedResult = mockedService.Add(_registryDto);
+                var spectedResult = mockedService.Add(_registryDto, FileType.Text);
 
                 mock.Mock<IVuelingService<RegistryDto>>()
-                    .Verify(service => service.Add(_registryDto));
+                    .Verify(service => service.Add(_registryDto, FileType.Text));
 
                 Assert.IsNotNull(spectedResult);
             }
