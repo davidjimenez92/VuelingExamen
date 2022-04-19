@@ -41,8 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Contracts\IAdd.cs" />
+    <Compile Include="Contracts\IFileRepository.cs" />
+    <Compile Include="Implementations\TextFileRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\VuelingExamen.Domain.Entities\VuelingExamen.Domain.Entities.csproj">
+      <Project>{D4F72D83-63CA-48E2-99B6-5796318CA372}</Project>
+      <Name>VuelingExamen.Domain.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
