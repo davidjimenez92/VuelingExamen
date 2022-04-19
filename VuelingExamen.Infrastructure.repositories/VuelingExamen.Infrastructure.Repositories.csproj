@@ -46,8 +46,16 @@
     <Compile Include="Implementations\TextFileRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
+    <PackageReference Include="System.Configuration.ConfigurationManager">
+      <Version>6.0.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VuelingExamen.CrossCutting.ProjectConfiguration\VuelingExamen.CrossCutting.ProjectConfiguration.csproj">
+      <Project>{FC4483F3-C2F0-4ED7-B5EA-B5F441E2B5E7}</Project>
+      <Name>VuelingExamen.CrossCutting.ProjectConfiguration</Name>
+    </ProjectReference>
     <ProjectReference Include="..\VuelingExamen.Domain.Entities\VuelingExamen.Domain.Entities.csproj">
       <Project>{D4F72D83-63CA-48E2-99B6-5796318CA372}</Project>
       <Name>VuelingExamen.Domain.Entities</Name>

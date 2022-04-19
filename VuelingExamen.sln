@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VuelingExamen.CrossCutting.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VuelingExamen.Infrastructure.RepositoriesUnitTests", "VuelingExamen.Infrastructure.RepositoriesUnitTests\VuelingExamen.Infrastructure.RepositoriesUnitTests.csproj", "{45A16311-1A10-4597-B704-A66893C0827C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VuelingExamen.Infrastructure.RepositoriesIntegrationTests", "VuelingExamen.Infrastructure.RepositoriesIntegrationTests\VuelingExamen.Infrastructure.RepositoriesIntegrationTests.csproj", "{349C8D6A-97CA-4A46-9C75-ED47365E14FB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{45A16311-1A10-4597-B704-A66893C0827C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45A16311-1A10-4597-B704-A66893C0827C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45A16311-1A10-4597-B704-A66893C0827C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{349C8D6A-97CA-4A46-9C75-ED47365E14FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{349C8D6A-97CA-4A46-9C75-ED47365E14FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{349C8D6A-97CA-4A46-9C75-ED47365E14FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{349C8D6A-97CA-4A46-9C75-ED47365E14FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -82,6 +88,7 @@ Global
 		{4787CD25-F6AE-43EC-8E14-DE7DB8ABB181} = {821E515D-4903-4250-BBD1-F5B3106A5AAA}
 		{FC4483F3-C2F0-4ED7-B5EA-B5F441E2B5E7} = {487F8664-9484-4489-B589-E642329D9BEF}
 		{45A16311-1A10-4597-B704-A66893C0827C} = {E0A5B64A-629C-44F9-A977-1D00F0915B9B}
+		{349C8D6A-97CA-4A46-9C75-ED47365E14FB} = {E0A5B64A-629C-44F9-A977-1D00F0915B9B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0BC04E20-2873-4CCE-B53C-44A555AB55C6}
