@@ -1,47 +1,24 @@
-﻿using System;
+﻿using CustomValidations;
+using Microsoft.Practices.EnterpriseLibrary.Validation.Validators;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using VuelingExamen.CrossCutting.ProjectConfiguration;
 
 namespace VuelingExamen.Distributed.WebServices.Contracts
 {
     // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de interfaz "IService1" en el código y en el archivo de configuración a la vez.
     [ServiceContract]
+    [ValidationBehavior]
     public interface IVuelingWebService
     {
 
         [OperationContract]
-        string GetData(int value);
-
-        [OperationContract]
-        CompositeType GetDataUsingDataContract(CompositeType composite);
-
-        // TODO: agregue aquí sus operaciones de servicio
-    }
-
-
-    // Utilice un contrato de datos, como se ilustra en el ejemplo siguiente, para agregar tipos compuestos a las operaciones de servicio.
-    [DataContract]
-    public class CompositeType
-    {
-        bool boolValue = true;
-        string stringValue = "Hello ";
-
-        [DataMember]
-        public bool BoolValue
-        {
-            get { return boolValue; }
-            set { boolValue = value; }
-        }
-
-        [DataMember]
-        public string StringValue
-        {
-            get { return stringValue; }
-            set { stringValue = value; }
-        }
+        [FaultContract(typeof(ValidationFault))]
+        bool Add([NotNullValidator(MessageTemplate = "List is null")] IEnumerable<string> data, FileType type);
     }
 }
