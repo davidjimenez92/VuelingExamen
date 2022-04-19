@@ -7,6 +7,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using VuelingExamen.CrossCutting.ProjectConfiguration;
 
 namespace VuelingExamen.Distributed.WebServices.Contracts
 {
@@ -18,6 +19,6 @@ namespace VuelingExamen.Distributed.WebServices.Contracts
 
         [OperationContract]
         [FaultContract(typeof(ValidationFault))]
-        bool Add([NotNullValidator(MessageTemplate = "List is null")] IEnumerable<string> data);
+        bool Add([NotNullValidator(MessageTemplate = "List is null")] IEnumerable<string> data, FileType type);
     }
 }
