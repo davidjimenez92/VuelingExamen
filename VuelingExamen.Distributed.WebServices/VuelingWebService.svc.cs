@@ -22,6 +22,7 @@ namespace VuelingExamen.Distributed.WebServices
 
         public bool Add([NotNullValidator(MessageTemplate = "List is null")] IEnumerable<string> data, FileType type = FileType.Text)
         {
+            _logger.Debug(data.Count());
             var listData = data.ToList();
             var dto = new RegistryDto()
             {
@@ -29,6 +30,7 @@ namespace VuelingExamen.Distributed.WebServices
                 Planet = listData[1]
             };
 
+            _logger.Debug(dto);
             return _vuelingService.Add(dto, type);
         }
     }
