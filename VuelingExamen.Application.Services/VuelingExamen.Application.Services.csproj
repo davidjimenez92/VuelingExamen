@@ -41,9 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutofacModules\ServiceModule.cs" />
     <Compile Include="Contracts\IAdd.cs" />
     <Compile Include="Contracts\IVuelingService.cs" />
     <Compile Include="Implementations\VuelingRegisterService.cs" />
+    <Compile Include="Profiles\ServiceProfile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -57,14 +59,23 @@
       <Version>2.0.14</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="AutofacModules\" />
-    <Folder Include="Profiles\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\VuelingExamen.Application.Dtos\VuelingExamen.Application.Dtos.csproj">
       <Project>{4787CD25-F6AE-43EC-8E14-DE7DB8ABB181}</Project>
       <Name>VuelingExamen.Application.Dtos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VuelingExamen.CrossCutting.ProjectConfiguration\VuelingExamen.CrossCutting.ProjectConfiguration.csproj">
+      <Project>{FC4483F3-C2F0-4ED7-B5EA-B5F441E2B5E7}</Project>
+      <Name>VuelingExamen.CrossCutting.ProjectConfiguration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VuelingExamen.Domain.Entities\VuelingExamen.Domain.Entities.csproj">
+      <Project>{D4F72D83-63CA-48E2-99B6-5796318CA372}</Project>
+      <Name>VuelingExamen.Domain.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VuelingExamen.Infrastructure.repositories\VuelingExamen.Infrastructure.Repositories.csproj">
+      <Project>{4EFFC3E9-3582-4D14-901F-5366107073F1}</Project>
+      <Name>VuelingExamen.Infrastructure.Repositories</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
