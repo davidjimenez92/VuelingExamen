@@ -41,6 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\IAdd.cs" />
+    <Compile Include="Contracts\IVuelingService.cs" />
+    <Compile Include="Implementations\VuelingRegisterService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -56,9 +59,13 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AutofacModules\" />
-    <Folder Include="Contracts\" />
-    <Folder Include="Implementations\" />
     <Folder Include="Profiles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VuelingExamen.Application.Dtos\VuelingExamen.Application.Dtos.csproj">
+      <Project>{4787CD25-F6AE-43EC-8E14-DE7DB8ABB181}</Project>
+      <Name>VuelingExamen.Application.Dtos</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
