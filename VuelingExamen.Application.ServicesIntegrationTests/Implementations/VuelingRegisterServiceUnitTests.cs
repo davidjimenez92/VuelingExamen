@@ -19,7 +19,7 @@ namespace VuelingExamen.Application.ServicesIntegrationTests.Implementations
             _service = Resolve<IVuelingService<RegistryDto>>();
             _registry = new RegistryDto()
             {
-                Rebeled = "David",
+                Rebeld = "David",
                 Planet = "Tierra"
             };
         }

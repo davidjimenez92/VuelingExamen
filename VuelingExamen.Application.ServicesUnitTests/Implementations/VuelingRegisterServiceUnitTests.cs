@@ -22,7 +22,7 @@ namespace VuelingExamen.Application.ServicesUnitTests.Implementations
         {
             _registryDto = new RegistryDto()
             {
-                Rebeled = "David",
+                Rebeld = "David",
                 Planet = "Tierra",
             };
         }

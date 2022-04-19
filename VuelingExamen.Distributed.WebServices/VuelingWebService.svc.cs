@@ -25,7 +25,7 @@ namespace VuelingExamen.Distributed.WebServices
             var listData = data.ToList();
             var dto = new RegistryDto()
             {
-                Rebeled = listData[0],
+                Rebeld = listData[0],
                 Planet = listData[1]
             };
 
