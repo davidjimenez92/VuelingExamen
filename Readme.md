@@ -19,7 +19,7 @@ The function of this layer is to perform all operations related to business rule
 3. [Entities](https://github.com/davidjimenez92/VuelingExamen/tree/master/VuelingExamen.Domain.Entities)  This layer contains the entities of our application.
 4. [Repositories](https://github.com/davidjimenez92/VuelingExamen/tree/master/VuelingExamen.Infrastructure.repositories) operations related to data persistence shall be performed in this layer. In this case, in order to implement new file types, we create the repository from the factory pattern to which a file type is passed, for the moment only the txt file will be available.
 5. [CrossCutting](https://github.com/davidjimenez92/VuelingExamen/tree/master/VuelingExamen.CrossCutting.ProjectConfiguration) this layer is created to strongly type the configuration variables of the app.config to encapsulate all configuration properties.
-6. [Client](https://github.com/davidjimenez92/VuelingExamen/tree/master/VuelingExamen.Client.HttpClient)this project is created to be able to upload that web service to azure devops using artifacts.
+6. [Client](https://github.com/davidjimenez92/VuelingExamen/tree/master/VuelingExamen.Client.HttpClient) this project is created to be able to upload that web service to azure devops using artifacts.
  
 ## Architecture Diagram
 ![UML DIAGRAM](https://github.com/davidjimenez92/VuelingExamen/blob/master/umlexam.png)
@@ -47,6 +47,6 @@ Before starting to develop, a [YAML](https://github.com/davidjimenez92/VuelingEx
 
 When the project is ready, the client is uploaded to artifacts.
 
-![arfifacts-web](https://github.com/davidjimenez92/VuelingExamen/blob/master/artifacts.png)
+![arfifacts-web](https://github.com/davidjimenez92/VuelingExamen/blob/master/artifact.png)
 ## Author
 [David Jiménez Miguel](https://github.com/davidjimenez92)
